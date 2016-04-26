@@ -61,6 +61,41 @@ nav ul {
 	padding-left: 0;
 }
 
+#hero {
+	background-color: #333333;
+	padding-top: 200px;
+	background-image: url(http://placehold.it/400x300); 
+						/* or in this format: url(../img/filename)*/
+	background-repeat: no-repeat; /* so the image would not repeat itself  */
+	background-size: 100%;
+	max-width: 1346px;
+	margin: 0 auto;
+}
+#hero > p {
+	background-color: #fff;
+	display: inline-block;
+	padding: 10px;
+	float: right;  /* so the paragraph will float to the right of the image  */
+}
+#hero div {
+	background-color: inherit;
+	color: #ffffff;
+	padding: 10px;
+	text-align: center;
+	clear: both;
+}
+#hero a {
+	background-color: #ffffff;
+	padding: 10px;
+	color: #189dcd;
+	display: inline-block;
+	text-decoration: none;
+}
+#hero button {
+	display: none;
+}
+
+
 @media all and (min-width: 600px) {
 
 	#mobile-banking {
@@ -109,6 +144,28 @@ nav ul {
 	nav a span {
 		display: none;  /*to hide the span  */
 	}
+
+	#hero {
+		position: relative;
+		background-size: auto;
+		background-position: right;
+	}
+
+	#hero div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 300px;
+	}
+	#hero:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#hero > p {
+		margin-bottom: 0;
+	}
+
 }
 
 @media all and (min-width: 970px) {
@@ -119,6 +176,23 @@ nav ul {
 	nav li {
 		padding: 0 15px;
 	}
+}
 
+@media all and (min-width: 1020px) {
+	#hero button {
+		display: block;
+		position: absolute;
+		top: 50%
+	}
+	#prev {
+		left: 0;
+	}
+	#next {
+		right: 0;
+	}
 
 }
+
+
+
+
